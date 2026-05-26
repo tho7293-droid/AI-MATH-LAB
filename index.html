@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>University Website Design - Easy Tutorials</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <section class="header">
+
+        <nav>
+            <a href="index.html">
+                <img src="images/logo.png" alt="Logo">
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">CURRICULUM</a></li>
+                     <li><a href="">OUTCOME</a></li>
+                    <li><a href="#people">PEOPLE</a></li>
+                     <li><a href="">PROJECT</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#apply">APPLY</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>Train Like a Future Researcher.</h1>
+
+            <p>
+                Research-oriented AI and mathematical thinking program
+                for highly motivated students.
+            </p>
+
+            <a href="" class="hero-btn">
+                Visit Us To Know More
+            </a>
+        </div>
+
+</section>
+
+<!------------People-------------->
+<section class="people" id="people">
+
+    <h1>Faculty & Students</h1>
+    <p class="people-intro">
+        Meet the mentors and students building a research-focused learning community
+        in AI, mathematics, and computational thinking.
+    </p>
+
+    <div class="people-container">
+
+        <div class="person-card faculty-card">
+            <img src="images/Dao.png" alt="Dr. Nguyen Truc Dao Nguyen">
+
+            <span class="person-tag">Faculty Mentor</span>
+
+            <h2>Dr. Nguyen Truc Dao Nguyen</h2>
+            <h4>Education</h4>
+
+            <p class="university">
+                Ph.D. Applied Mathematics, Wayne State University
+            </p>
+
+            <div class="info">
+                <h3>Research Interests</h3>
+                <p>Machine Learning, optimization, data science, optimal control, and applications in engineering, medicine, economics, biology,</p>
+
+                <h3>Academic Achievements</h3>
+                <p>Thomas C. Rumble University Graduate Fellowship, Wayne State University: two graduate students receive this award per academic year. Graduate Student Travel Grants.
+                    AMS Simons Travel Grant, Early-career AMS-NSF-Simons-ICM Travel Grant, and Travel Award by National Science Foundation.
+                </p>
+            </div>
+        </div>
+
+        <div class="person-card faculty-card">
+            <img src="images/Hoa.png" alt="Dr. Hoa Nguyen">
+
+            <span class="person-tag">Faculty Mentor</span>
+
+            <h2>Dr. Hoa Vu</h2>
+            <h4>Education</h4>
+
+            <p class="university">
+               Ph.D. CS, University of Massachusetts Amherst
+            </p>
+
+            <div class="info">
+                <h3>Research Interests</h3>
+                <p>Streaming, distributed algorithms, and algorithms with machine learning predictions</p>
+
+                <h3>Academic Achievements</h3>
+                <p>Sponsored by National Science Foundation, San Diego State University, $200,000.00.
+                   Sponsored by National Science Foundation, San Diego State University, $596,118.00
+                   Sponsored by National Science Foundation, San Diego State University, $200.00
+                </p>
+            </div>
+        </div>
+
+        <div class="person-card student-card">
+            <img src="images/Trinh.png" alt="Trinh Ho">
+
+            <span class="person-tag">Student Mentor</span>
+
+            <h2>Trinh Ho</h2>
+            <h4>Education</h4>
+
+            <p class="university">
+                B.S. SDSU in Applied Mathematics, Computer Science, and Statistics (Triple Major)
+            </p>
+
+            <div class="info">
+                <h3>Research Interests</h3>
+                <p>Applied Mathematics, Machine Learning, and Computer Vision</p>
+
+                <h3>Academic Achievements</h3>
+                <p>Qualified for Computer Science State competion LSU.
+                    Cyber Patriot National Competion Qualified.
+                </p>
+            </div>
+        </div>
+
+        <div class="person-card student-card">
+            <img src="images/Robert.png" alt="Robert Nguyen">
+
+            <span class="person-tag">Student Mentor</span>
+
+            <h2>Robert Nguyen</h2>
+            <h4>Education</h4>
+
+            <p class="university">
+                B.S. SDSU in Applied Mathematics and Finance (Double Major)
+            </p>
+
+            <div class="info">
+                <h3>Research Interests</h3>
+                <p>Applied Mathematics, Data Science, Scientific Computing</p>
+
+                <h3>Academic Achievements</h3>
+                <p>The President’s Award for Outstanding Academic Excellence.
+                   Departmental Honors in Mathematics (UCHS, 2025): 1 of 3 students selected out of a student body of 1,500+.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+</section>
+<!------------FAQ-------------->
+<section class="faq" id="faq">
+
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq-box">
+
+        <div class="faq-item">
+            <h3>Who can apply?</h3>
+            <p>
+                Highly motivated students from K8 - K12 who are interested in AI, mathematics,
+                and research-oriented learning are encouraged to apply.
+            </p>
+        </div>
+         
+        <div class="faq-item">
+            <h3>Is there any tuition required for the program?</h3>
+            <p> No. The program is completely free of charge for selected students. 
+                Our goal is to provide accessible opportunities for motivated students
+                who are passionate about AI, mathematics, and research.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Do I need prior programming experience?</h3>
+            <p>
+                No. We welcome beginners as long as they are eager to learn
+                and committed to problem solving.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How are students selected?</h3>
+            <p>
+                Selection is based on motivation, academic curiosity,
+                and performance in the application process.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Will students work on projects?</h3>
+            <p>
+                Yes. Students will have opportunities to choose to work on research-oriented projects across multiple areas of AI, including Computer Vision, Natural Language Processing, Machine Learning, and Mathematical Modeling.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What is the duration of the program?</h3>
+            <p>
+                The program runs for 6 weeks beginning in August, providing students with
+                an intensive and research-focused learning experience in AI and mathematics.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Is the program in person?</h3>
+            <p>  No. The program is fully online, allowing students to participate from anywhere while attending live sessions, collaborating with mentors, 
+                and engaging in research-focused activities remotely. Detailed schedules, meeting times, and program starting dates will be announced at a later time.
+            </p>
+        </div>
+    </div>
+</section>
+<!------------Apply-------------->
+<section class="apply" id="apply">
+
+    <div class="apply-left">
+        <h5>APPLICATIONS</h5>
+        <h1>Ready to apply?<br><span>Start here.</span></h1>
+
+        <p>
+            Cohorts are intentionally small. We review applications on a rolling basis.
+            Students who demonstrate mathematical curiosity and commitment to independent
+            learning are prioritized.
+        </p>
+
+        <div class="apply-steps">
+            <div class="step">
+                <span>1</span>
+                <p>Submit the full application form below.</p>
+            </div>
+
+            <div class="step">
+                <span>2</span>
+                <p>A brief conversation with faculty to discuss your goals and background.</p>
+            </div>
+
+            <div class="step">
+                <span>3</span>
+                <p>Enrollment confirmation and onboarding materials sent within one week.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="apply-card">
+        <h2>Program Application</h2>
+        <p>Complete the application below. Required fields must be filled out before submission.</p>
+
+        <form>
+            <h3>Student Information</h3>
+
+            <label>FULL NAME</label>
+            <input type="text" placeholder="Your full name" required>
+
+            <label>PREFERRED NAME</label>
+            <input type="text" placeholder="Preferred name">
+
+            <label>EMAIL ADDRESS</label>
+            <input type="email" placeholder="you@example.com" required>
+
+            <label>PHONE NUMBER</label>
+            <input type="tel" placeholder="Phone number">
+
+            <label>CURRENT GRADE LEVEL</label>
+            <select required>
+                <option value="">Select grade level</option>
+                <option>Grade 8</option>
+                <option>Grade 9</option>
+                <option>Grade 10</option>
+                <option>Grade 11</option>
+                <option>Grade 12</option>
+            </select>
+
+            <label>SCHOOL NAME</label>
+            <input type="text" placeholder="School name">
+
+            <label>CITY & COUNTRY</label>
+            <input type="text" placeholder="City, Country">
+
+            <label>TIME ZONE</label>
+            <select>
+                <option>Pacific Time (PT)</option>
+                <option>Mountain Time (MT)</option>
+                <option>Central Time (CT)</option>
+                <option>Eastern Time (ET)</option>
+                <option>Vietnam Time (ICT)</option>
+                <option>Other</option>
+            </select>
+
+            <h3>Academic Background</h3>
+
+            <label>WHICH MATH COURSES HAVE YOU COMPLETED?</label>
+            <textarea placeholder="Example: Algebra I, Geometry, Algebra II, Precalculus, Calculus, Statistics, Linear Algebra, Other"></textarea>
+
+            <label>CODING EXPERIENCE</label>
+            <select>
+                <option>No prior experience</option>
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+            </select>
+
+            <label>WHICH PROGRAMMING LANGUAGES HAVE YOU USED?</label>
+            <textarea placeholder="Example: Python, Java, C/C++, JavaScript, Scratch, Other"></textarea>
+
+            <label>HAVE YOU PARTICIPATED IN ANY COMPETITIONS, PROJECTS, OR STEM PROGRAMS?</label>
+            <textarea></textarea>
+
+            <h3>Student Essays</h3>
+
+            <label>WHY ARE YOU INTERESTED IN THIS PROGRAM?</label>
+            <textarea required></textarea>
+
+            <label>WHAT ARE YOUR ACADEMIC OR CAREER GOALS?</label>
+            <textarea required></textarea>
+
+            <label>DESCRIBE A CHALLENGING PROBLEM YOU SOLVED OR A PROJECT YOU WORKED ON.</label>
+            <textarea required></textarea>
+
+            <label>WHAT DO YOU HOPE TO LEARN FROM THIS PROGRAM?</label>
+            <textarea required></textarea>
+
+            <h3>Project Interests</h3>
+
+            <label>WHICH TOPICS ARE YOU MOST INTERESTED IN?</label>
+            <textarea placeholder="Example: AI, Machine Learning, Mathematics, Optimization, Robotics, Data Science, Computer Science, Research, Python Programming, Mathematical Modeling"></textarea>
+
+            <label>HAVE YOU USED GITHUB BEFORE?</label>
+            <select>
+                <option>No</option>
+                <option>Yes</option>
+            </select>
+
+            <label>IF YES, WHAT IS YOUR GITHUB USERNAME?</label>
+            <input type="text" placeholder="GitHub username">
+
+            <label>ARE YOU INTERESTED IN PRESENTING A FINAL PROJECT?</label>
+            <select>
+                <option>Yes</option>
+                <option>No</option>
+                <option>Maybe</option>
+            </select>
+
+            <h3>Parent/Guardian Information</h3>
+
+            <label>PARENT/GUARDIAN NAME</label>
+            <input type="text" required>
+
+            <label>PARENT/GUARDIAN EMAIL</label>
+            <input type="email" required>
+
+            <label>PARENT/GUARDIAN PHONE NUMBER</label>
+            <input type="tel" required>
+
+            <label>PARENT/GUARDIAN OCCUPATION</label>
+            <input type="text">
+
+            <h3>Additional Materials</h3>
+
+            <label>UPLOAD TRANSCRIPT OR REPORT CARD</label>
+            <input type="file">
+
+            <label>UPLOAD RESUME OR PORTFOLIO</label>
+            <input type="file">
+
+            <label>ADDITIONAL INFORMATION YOU WOULD LIKE US TO KNOW</label>
+            <textarea></textarea>
+
+            <h3>Program Expectations</h3>
+
+            <label class="checkbox-line">
+                <input type="checkbox" required>
+                I understand that this is a research-oriented academic program requiring active participation.
+            </label>
+
+            <label class="checkbox-line">
+                <input type="checkbox" required>
+                I understand that sessions may be recorded for educational purposes.
+            </label>
+
+            <label class="checkbox-line">
+                <input type="checkbox" required>
+                I understand that submitting this application does not guarantee admission.
+            </label>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+
+</section>
+<!--Javascript toggle for Menu Bar-->
+<script>
+    var navLinks = document.getElementById("navLinks")
+    function showMenu(){
+      navLinks.style.right = "0";
+    }
+    function hideMenu(){
+      navLinks.style.right = "-200px";
+    }
+</script>
+</body>
+</html>
