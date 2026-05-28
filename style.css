@@ -1096,6 +1096,16 @@ nav .fa{
         padding: 28px;
     }
 }
+.contact-success-message{
+    display: none;
+    margin-top: 16px;
+    background: #28a745;
+    color: #fff;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-weight: 800;
+    text-align: center;
+}
 
 /* Mobile responsive design for triple bar.*/
 @media(max-width: 700px){
