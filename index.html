@@ -492,23 +492,23 @@
         <h2>Program Application</h2>
         <p>Complete the application below. Required fields must be filled out before submission.</p>
 
-        <form>
+        <form id="applicationForm">
             <h3>Student Information</h3>
 
             <label>FULL NAME</label>
-            <input type="text" placeholder="Your full name" required>
+            <input type="text" name="fullName" placeholder="Your full name" required>
 
             <label>PREFERRED NAME</label>
-            <input type="text" placeholder="Preferred name">
+            <input type="text" name="preferredName" placeholder="Preferred name">
 
             <label>EMAIL ADDRESS</label>
-            <input type="email" placeholder="you@example.com" required>
+            <input type="email" name="email" placeholder="you@example.com" required>
 
             <label>PHONE NUMBER</label>
-            <input type="tel" placeholder="Phone number">
+            <input type="tel" name="phone" placeholder="Phone number">
 
             <label>CURRENT GRADE LEVEL</label>
-            <select required>
+            <select name="grade" required>
                 <option value="">Select grade level</option>
                 <option>Grade 8</option>
                 <option>Grade 9</option>
@@ -518,13 +518,13 @@
             </select>
 
             <label>SCHOOL NAME</label>
-            <input type="text" placeholder="School name">
+            <input type="text" name="school" placeholder="School name">
 
             <label>CITY & COUNTRY</label>
-            <input type="text" placeholder="City, Country">
+            <input type="text" name="location" placeholder="City, Country">
 
             <label>TIME ZONE</label>
-            <select>
+            <select name="timeZone">
                 <option>Pacific Time (PT)</option>
                 <option>Mountain Time (MT)</option>
                 <option>Central Time (CT)</option>
@@ -536,10 +536,10 @@
             <h3>Academic Background</h3>
 
             <label>WHICH MATH COURSES HAVE YOU COMPLETED?</label>
-            <textarea placeholder="Example: Algebra I, Geometry, Algebra II, Precalculus, Calculus, Statistics, Linear Algebra, Other"></textarea>
+            <textarea name="mathCourses" placeholder="Example: Algebra I, Geometry, Algebra II, Precalculus, Calculus, Statistics, Linear Algebra, Other"></textarea>
 
             <label>CODING EXPERIENCE</label>
-            <select>
+            <select name="codingExperience">
                 <option>No prior experience</option>
                 <option>Beginner</option>
                 <option>Intermediate</option>
@@ -547,41 +547,41 @@
             </select>
 
             <label>WHICH PROGRAMMING LANGUAGES HAVE YOU USED?</label>
-            <textarea placeholder="Example: Python, Java, C/C++, JavaScript, Scratch, Other"></textarea>
+            <textarea name="programmingLanguages" placeholder="Example: Python, Java, C/C++, JavaScript, Scratch, Other"></textarea>
 
             <label>HAVE YOU PARTICIPATED IN ANY COMPETITIONS, PROJECTS, OR STEM PROGRAMS?</label>
-            <textarea></textarea>
+            <textarea name="competitions"></textarea>
 
             <h3>Student Essays</h3>
 
             <label>WHY ARE YOU INTERESTED IN THIS PROGRAM?</label>
-            <textarea required></textarea>
+            <textarea name="whyInterested" required></textarea>
 
             <label>WHAT ARE YOUR ACADEMIC OR CAREER GOALS?</label>
-            <textarea required></textarea>
+            <textarea name="careerGoals" required></textarea>
 
             <label>DESCRIBE A CHALLENGING PROBLEM YOU SOLVED OR A PROJECT YOU WORKED ON.</label>
-            <textarea required></textarea>
+            <textarea name="challengeProblem" required></textarea>
 
             <label>WHAT DO YOU HOPE TO LEARN FROM THIS PROGRAM?</label>
-            <textarea required></textarea>
+            <textarea name="hopeToLearn" required></textarea>
 
             <h3>Project Interests</h3>
 
             <label>WHICH TOPICS ARE YOU MOST INTERESTED IN?</label>
-            <textarea placeholder="Example: AI, Machine Learning, Mathematics, Optimization, Robotics, Data Science, Computer Science, Research, Python Programming, Mathematical Modeling"></textarea>
+            <textarea name="topicInterests" placeholder="Example: AI, Machine Learning, Mathematics, Optimization, Robotics, Data Science"></textarea>
 
             <label>HAVE YOU USED GITHUB BEFORE?</label>
-            <select>
+            <select name="usedGithub">
                 <option>No</option>
                 <option>Yes</option>
             </select>
 
             <label>IF YES, WHAT IS YOUR GITHUB USERNAME?</label>
-            <input type="text" placeholder="GitHub username">
+            <input type="text" name="githubUsername" placeholder="GitHub username">
 
             <label>ARE YOU INTERESTED IN PRESENTING A FINAL PROJECT?</label>
-            <select>
+            <select name="finalProjectInterest">
                 <option>Yes</option>
                 <option>No</option>
                 <option>Maybe</option>
@@ -590,50 +590,45 @@
             <h3>Parent/Guardian Information</h3>
 
             <label>PARENT/GUARDIAN NAME</label>
-            <input type="text" required>
+            <input type="text" name="parentName" required>
 
             <label>PARENT/GUARDIAN EMAIL</label>
-            <input type="email" required>
+            <input type="email" name="parentEmail" required>
 
             <label>PARENT/GUARDIAN PHONE NUMBER</label>
-            <input type="tel" required>
+            <input type="tel" name="parentPhone" required>
 
             <label>PARENT/GUARDIAN OCCUPATION</label>
-            <input type="text">
+            <input type="text" name="parentOccupation">
 
             <h3>Additional Materials</h3>
 
-            <label>UPLOAD TRANSCRIPT OR REPORT CARD</label>
-            <input type="file">
-
-            <label>UPLOAD RESUME OR PORTFOLIO</label>
-            <input type="file">
-
             <label>ADDITIONAL INFORMATION YOU WOULD LIKE US TO KNOW</label>
-            <textarea></textarea>
+            <textarea name="additionalInfo"></textarea>
 
             <h3>Program Expectations</h3>
 
             <label class="checkbox-line">
-                <input type="checkbox" required>
+                <input type="checkbox" name="participationAgreement" required>
                 I understand that this is a research-oriented academic program requiring active participation.
             </label>
 
             <label class="checkbox-line">
-                <input type="checkbox" required>
+                <input type="checkbox" name="recordingAgreement" required>
                 I understand that sessions may be recorded for educational purposes.
             </label>
 
             <label class="checkbox-line">
-                <input type="checkbox" required>
+                <input type="checkbox" name="admissionAgreement" required>
                 I understand that submitting this application does not guarantee admission.
             </label>
 
-            <button type="submit">Submit Application</button>
+            <button type="submit" id="applicationSubmitBtn">Submit Application</button>
         </form>
     </div>
 
 </section>
+
 <!------------Contact-------------->
 <section class="contact" id="contact">
 
@@ -760,8 +755,57 @@ form.addEventListener("submit", e => {
     submitBtn.style.background = "#28a745";
 
 });
-
 </script>
 
+<!------------ApplyForm Script-------------->
+<script>
+const applicationScriptURL = "https://script.google.com/macros/s/AKfycbxQQ-ud8q25AUoOzFJTU2zvZph4k5djb2liwng0x4VzHOnoxeY-vrnb0p3O8-iFFoue/exec";
+
+const applicationForm = document.getElementById("applicationForm");
+const applicationSubmitBtn = document.getElementById("applicationSubmitBtn");
+applicationForm.addEventListener("submit", e => {
+    e.preventDefault();
+
+    applicationSubmitBtn.innerText = "Submitting...";
+    applicationSubmitBtn.disabled = true;
+
+    const formData = new FormData(applicationForm);
+    const data = {};
+
+    formData.forEach((value, key) => {
+        data[key] = value;
+    });
+
+    fetch(applicationScriptURL, {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify(data)
+    })
+    .then(() => {
+
+        applicationForm.reset();
+
+        applicationSubmitBtn.innerText = "Application Submitted Successfully";
+
+        applicationSubmitBtn.style.background = "#28a745";
+
+        applicationSubmitBtn.style.border = "none";
+
+        applicationSubmitBtn.style.color = "#fff";
+
+        applicationSubmitBtn.disabled = false;
+
+    })
+    .catch(() => {
+
+        applicationSubmitBtn.innerText = "Submission Failed";
+
+        applicationSubmitBtn.style.background = "#dc3545";
+
+        applicationSubmitBtn.disabled = false;
+
+    });
+});
+</script>
 </body>
 </html>
