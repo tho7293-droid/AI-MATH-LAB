@@ -638,6 +638,7 @@
 <section class="contact" id="contact">
 
     <h1>Contact Us</h1>
+
     <p class="contact-intro">
         Have questions about the program, application process, or student eligibility?
         Contact us and we will get back to you soon.
@@ -646,11 +647,12 @@
     <div class="contact-container">
 
         <div class="contact-info">
+
             <div class="contact-item">
                 <i class="fa fa-envelope"></i>
                 <div>
                     <h3>Email</h3>
-                    <p>your-email@gmail.com</p>
+                    <p>vaolab474@gmail.com</p>
                 </div>
             </div>
 
@@ -669,28 +671,97 @@
                     <p>Fully Online</p>
                 </div>
             </div>
+
         </div>
 
-        <form class="contact-form">
-            <input type="text" placeholder="Your name" required>
-            <input type="email" placeholder="Your email" required>
-            <input type="text" placeholder="Subject" required>
-            <textarea placeholder="Your message" required></textarea>
-            <button type="submit">Send Message</button>
+        <form class="contact-form" id="contactForm">
+
+            <input 
+                type="text"
+                name="name"
+                placeholder="Your name"
+                required
+            >
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Your email"
+                required
+            >
+
+            <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                required
+            >
+
+            <textarea
+                name="message"
+                placeholder="Your message"
+                required
+            ></textarea>
+
+            <button type="submit" id="contactSubmitBtn">
+                Send Message
+            </button>
+
         </form>
 
     </div>
+
 </section>
 
 <!--Javascript toggle for Menu Bar-->
 <script>
     var navLinks = document.getElementById("navLinks")
+
     function showMenu(){
-      navLinks.style.right = "0";
+        navLinks.style.right = "0";
     }
+
     function hideMenu(){
-      navLinks.style.right = "-200px";
+        navLinks.style.right = "-200px";
     }
 </script>
+
+<!------------Contact Form Script-------------->
+<script>
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbzUomb3Cd7oeID87G-ZIFFPkoy4HoqKH8K6WgNLX2MHC5m2pLJTf10ycUk1N1wg0hJHsw/exec"
+const form = document.getElementById("contactForm");
+
+const submitBtn = document.getElementById("contactSubmitBtn");
+
+form.addEventListener("submit", e => {
+
+    e.preventDefault();
+
+    submitBtn.innerText = "Sending...";
+
+    submitBtn.disabled = true;
+
+    fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify({
+            name: form.name.value,
+            email: form.email.value,
+            subject: form.subject.value,
+            message: form.message.value
+        })
+    });
+
+    form.reset();
+
+    submitBtn.innerText = "Submitted Successfully";
+
+    submitBtn.style.background = "#28a745";
+
+});
+
+</script>
+
 </body>
 </html>
