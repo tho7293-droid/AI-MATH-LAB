@@ -1274,4 +1274,17 @@ nav .fa{
         cursor: pointer;
     }
 }
+/* ===== Featured Achievement Badges ===== */
 
+.info p span {
+    display: inline-block;
+    background: #f0f7ff;
+    border: 1px solid #d4e4ff;
+    border-radius: 999px;
+    padding: 8px 14px;
+    margin: 5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0b3d91;
+    line-height: 1.4;
+}
