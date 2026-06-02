@@ -1284,4 +1284,10 @@ nav .fa{
     }
 }
 
-
+.footer-disclaimer{
+    margin-top:40px;
+    text-align:center;
+    font-size:9px;
+    color:#999;
+    opacity:0.5;
+}
