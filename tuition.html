@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Page Title -->
+  <title>Tuition Payment Instructions</title>
+
+  <style>
+    /* Global Page Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f9fc;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+
+    /* Main Content Container */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    }
+
+    /* Main Heading */
+    h1 {
+      text-align: center;
+      color: #1f4e79;
+      margin-bottom: 10px;
+    }
+
+    /* Subtitle Text */
+    .subtitle {
+      text-align: center;
+      color: #555;
+      margin-bottom: 35px;
+    }
+
+    /* Payment Option Card */
+    .option {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 25px;
+      background: #fafafa;
+    }
+
+    /* Section Headers */
+    .option h2 {
+      color: #1f4e79;
+      margin-top: 0;
+    }
+
+    /* Labels such as Recipient, Email, Tuition */
+    .label {
+      font-weight: bold;
+    }
+
+    /* Important Notice Box */
+    .highlight {
+      background: #eef6ff;
+      padding: 12px;
+      border-left: 4px solid #1f4e79;
+      margin: 15px 0;
+      border-radius: 6px;
+    }
+
+    /* Stripe Payment Button */
+    .button {
+      display: inline-block;
+      background: #1f4e79;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .button:hover {
+      background: #163a5a;
+    }
+
+    /* Footer Section */
+    .footer {
+      text-align: center;
+      margin-top: 35px;
+      color: #555;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Page Container -->
+  <div class="container">
+
+    <!-- Page Header -->
+    <h1>Tuition Payment Instructions</h1>
+    <p class="subtitle">
+      Please choose one of the payment options below.
+    </p>
+
+    <!-- =========================
+         Option 1: Zelle Payment
+         ========================= -->
+    <div class="option">
+      <h2>Option 1: Zelle</h2>
+
+      <p>
+        <span class="label">Recipient:</span>
+        Nguyen-Truc-Dao Nguyen DBA VietGrowth Education
+      </p>
+
+      <p>
+        <span class="label">Zelle Email:</span>
+        payments@vao-lab.com
+      </p>
+
+      <!-- Student name reminder -->
+      <div class="highlight">
+        Please include the student's full name in the payment memo.
+      </div>
+    </div>
+
+    <!-- =========================
+         Option 2: Credit Card
+         ========================= -->
+    <div class="option">
+      <h2>Option 2: Credit Card</h2>
+
+      <p>
+        For families who prefer to pay by credit card, we offer a secure
+        online payment option through Stripe.
+      </p>
+
+      <p>
+        <span class="label">Credit Card Tuition:</span>
+        $973
+      </p>
+
+      <p>
+        <em>This amount includes a 3% payment processing fee.</em>
+      </p>
+
+      <!-- Stripe Payment Link -->
+      <a
+        class="button"
+        href="https://buy.stripe.com/eVq5kF94m1Ho9ed0WEeME01"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Pay by Credit Card
+      </a>
+    </div>
+
+    <!-- =========================
+         After Payment Information
+         ========================= -->
+    <div class="option">
+      <h2>After Payment</h2>
+
+      <p>
+        Once payment is received, we will send a confirmation email and
+        onboarding information, including:
+      </p>
+
+      <ul>
+        <li>Program schedule</li>
+        <li>Zoom links (if applicable)</li>
+        <li>Course materials</li>
+      </ul>
+    </div>
+
+    <!-- =========================
+         Contact Information
+         ========================= -->
+    <div class="footer">
+      <p>
+        If you have any questions, please contact us vaolab474@gmail.com
+      </p>
+    </div>
+
+  </div>
+
+</body>
+</html>
+```
