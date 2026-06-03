@@ -1204,7 +1204,155 @@ nav .fa{
        margin-top: 10px;
    }
 }
+/* ------------ LOGIN SECTION ------------ */
 
+.login-section{
+   width: 100%;
+   padding: 100px 0;
+   background: #f8f8f8;
+   font-family: 'Poppins', sans-serif;
+   text-align: center;
+}
+
+/* Header */
+.login-header{
+   text-align: center;
+   margin-bottom: 35px;
+}
+
+.login-header h5{
+   color: #A6192E;
+   letter-spacing: 3px;
+   font-size: 14px;
+   font-weight: 800;
+   margin-bottom: 18px;
+}
+
+.login-header h1{
+   font-size: 42px;
+   line-height: 1.2;
+   color: #222;
+   font-weight: 800;
+}
+
+.login-header h1::after{
+   content: '';
+   width: 80px;
+   height: 4px;
+   background: #D41736;
+   display: block;
+   margin: 18px auto 0;
+   border-radius: 2px;
+}
+
+/* Information Box */
+.login-info-box{
+   max-width: 650px;
+   margin: 0 auto 35px;
+   background: #fff;
+   padding: 30px;
+   border-radius: 18px;
+   box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+   border-left: 5px solid #D41736;
+}
+
+.login-info-box i{
+   font-size: 36px;
+   color: #D41736;
+   margin-bottom: 15px;
+}
+
+.login-info-box h3{
+   font-size: 24px;
+   color: #222;
+   margin-bottom: 12px;
+   font-weight: 700;
+}
+
+.login-info-box p{
+   color: #666;
+   line-height: 1.8;
+   font-size: 15px;
+}
+
+/* Login Form */
+#loginForm{
+   width: 90%;
+   max-width: 430px;
+   margin: auto;
+   background: #fff;
+   padding: 45px 38px;
+   border-radius: 20px;
+   box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+   display: flex;
+   flex-direction: column;
+}
+
+#loginForm input{
+   width: 100%;
+   height: 55px;
+   padding: 0 16px;
+   margin-bottom: 20px;
+   border: 2px solid #e5e5e5;
+   border-radius: 10px;
+   font-size: 15px;
+   font-family: 'Poppins', sans-serif;
+   background: #fafafa;
+   box-sizing: border-box;
+   transition: 0.3s;
+}
+
+#loginForm input:focus{
+   border-color: #A6192E;
+   background: #fff;
+   box-shadow: 0 0 0 4px rgba(166,25,46,0.12);
+   outline: none;
+}
+
+#loginForm button{
+   height: 56px;
+   background: #111;
+   color: #fff;
+   border: none;
+   border-radius: 10px;
+   font-size: 16px;
+   font-weight: 800;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+#loginForm button:hover{
+   background: #A6192E;
+   transform: translateY(-2px);
+}
+
+#loginMessage{
+   margin-top: 20px;
+   font-size: 15px;
+   font-weight: 700;
+   color: #A6192E;
+}
+
+/* Mobile */
+@media(max-width:700px){
+
+   .login-section{
+      padding: 70px 0;
+   }
+
+   .login-header h1{
+      font-size: 30px;
+   }
+
+   .login-info-box{
+      width: 90%;
+      padding: 25px;
+   }
+
+   #loginForm{
+      padding: 32px 24px;
+   }
+}
 
 /* ------------ CONTACT SECTION ------------ */
 
