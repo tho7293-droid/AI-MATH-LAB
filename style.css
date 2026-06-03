@@ -22,10 +22,9 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
-
 nav img{
     width: 210px;
-    height: 100px;
+    height: 120px;
     object-fit: contain;
 }
 
@@ -47,6 +46,7 @@ nav img{
     font-size: 13px;
     font-family: Arial, sans-serif;
 }
+
 /* Animated red underline effect for hover.*/
 .nav-links ul li::after{
     content: '';
