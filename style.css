@@ -870,6 +870,16 @@ nav .fa{
 }
 /* ------------------------------------------------------ APPLY SECTION ---------------------------------------- */
 
+.early-bird-banner{
+   background: #fff;
+   color: #A6192E;
+   padding: 18px 22px;
+   border-radius: 12px;
+   font-weight: 800;
+   font-size: 18px;
+   margin-bottom: 25px;
+   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
 
 .apply{
    background: linear-gradient(135deg, #A6192E 0%, #7A0019 100%);
