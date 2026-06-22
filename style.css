@@ -121,6 +121,13 @@ nav img{
 nav .fa{
    display: None;
 }
+/* ------------------------------------------------------ FUTURE COHORT BUTTON --------------------------------- */
+
+.cohort-link{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+}
 
 
 /* ------------------------------------------------------ ABOUT SECTION --------------------------------- */
