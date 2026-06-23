@@ -1,137 +1,138 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Tuition Payment Instructions</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #f7f9fc;
       margin: 0;
-      padding: 0;
-      color: #222;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #eef5ff, #f9fbff);
+      color: #1f2937;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 960px;
       margin: 40px auto;
-      background: white;
-      padding: 40px;
-      border-radius: 14px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      padding: 24px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 42px;
+      box-shadow: 0 18px 45px rgba(31, 78, 121, 0.12);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 38px;
     }
 
     h1 {
-      text-align: center;
+      margin: 0 0 12px;
       color: #1f4e79;
-      margin-bottom: 10px;
+      font-size: 38px;
     }
 
     .subtitle {
-      text-align: center;
-      color: #555;
-      margin-bottom: 35px;
+      color: #5f6b7a;
+      font-size: 17px;
+      margin: 0;
     }
 
     .option {
-      border: 1px solid #ddd;
-      border-radius: 16px;
+      border: 1px solid #e5edf7;
+      border-radius: 20px;
       padding: 30px;
-      margin-bottom: 25px;
-      background: #fafafa;
+      margin-bottom: 24px;
+      background: #fbfdff;
     }
 
     .option h2 {
-      color: #1f4e79;
       margin-top: 0;
-      font-size: 34px;
+      margin-bottom: 18px;
+      color: #1f4e79;
+      font-size: 28px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #eef6ff;
+      color: #1f4e79;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 14px;
+    }
+
+    .zelle-layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .info-box {
+      background: #ffffff;
+      border: 1px solid #e8eef6;
+      border-radius: 14px;
+      padding: 18px;
+      margin: 14px 0;
     }
 
     .label {
-      font-weight: bold;
+      display: block;
+      color: #607086;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 6px;
+    }
+
+    .value {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1f2937;
     }
 
     .highlight {
       background: #eef6ff;
-      padding: 16px 18px;
       border-left: 5px solid #1f4e79;
-      margin-top: 24px;
-      border-radius: 8px;
-      font-size: 17px;
-    }
-
-    .button {
-      display: inline-block;
-      background: #1f4e79;
-      color: white;
-      padding: 14px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-
-    .button:hover {
-      background: #163a5a;
-    }
-
-    .zelle-layout {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 40px;
-    }
-
-    .zelle-info {
-      flex: 1;
-    }
-
-    .zelle-badge {
-      display: inline-block;
-      background: #6f2cff;
-      color: white;
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
-
-    .info-row {
-      margin: 18px 0;
-      font-size: 20px;
+      padding: 16px 18px;
+      border-radius: 12px;
+      margin-top: 20px;
+      font-size: 16px;
       line-height: 1.5;
     }
 
-    .info-row .label {
-      display: block;
-      color: #1f4e79;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 4px;
-    }
-
     .qr-card {
-      width: 280px;
-      background: white;
-      border-radius: 16px;
-      padding: 20px;
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 18px;
       text-align: center;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      border: 1px solid #ececec;
+      border: 1px solid #e8eef6;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.08);
     }
 
     .qr-card img {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 12px;
     }
 
     .qr-title {
-      margin: 14px 0 6px;
+      margin: 14px 0 5px;
       font-size: 20px;
       font-weight: 700;
       color: #1f4e79;
@@ -139,136 +140,225 @@
 
     .qr-subtitle {
       margin: 0;
-      color: #666;
+      color: #667085;
       font-size: 14px;
-      line-height: 1.4;
+    }
+
+    .price-row {
+      background: #ffffff;
+      border: 1px solid #e8eef6;
+      border-radius: 14px;
+      padding: 18px;
+      margin: 18px 0;
+    }
+
+    .price {
+      font-size: 30px;
+      font-weight: 800;
+      color: #1f4e79;
+    }
+
+    .note {
+      color: #667085;
+      font-size: 15px;
+      margin-top: 8px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #1f4e79;
+      color: white;
+      padding: 15px 26px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      margin-top: 10px;
+      transition: all 0.2s ease;
+    }
+
+    .button:hover {
+      background: #173d60;
+      transform: translateY(-1px);
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      line-height: 1.6;
     }
 
     .footer {
       text-align: center;
-      margin-top: 35px;
-      color: #555;
+      margin-top: 30px;
+      color: #667085;
       font-size: 15px;
     }
 
+    .footer a {
+      color: #1f4e79;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
     @media (max-width: 768px) {
-      .container {
-        margin: 20px;
+      .card {
         padding: 24px;
       }
 
       .zelle-layout {
-        flex-direction: column;
-        align-items: stretch;
+        grid-template-columns: 1fr;
       }
 
       .qr-card {
-        width: auto;
         max-width: 320px;
         margin: 0 auto;
       }
 
-      .option h2 {
-        font-size: 28px;
+      h1 {
+        font-size: 30px;
       }
     }
   </style>
 </head>
+
 <body>
-
   <div class="container">
+    <div class="card">
 
-    <h1>Tuition Payment Instructions</h1>
+      <div class="header">
+        <h1>Tuition Payment Instructions</h1>
+        <p class="subtitle">
+          Please choose one of the payment options below.
+        </p>
+      </div>
 
-    <p class="subtitle">
-      Please choose one of the payment options below.
-    </p>
+      <!-- ZELLE -->
+      <div class="option">
+        <span class="badge">Option 1 · Zelle Payment</span>
 
-    <div class="option">
-      <div class="zelle-layout">
+        <div class="zelle-layout">
 
-        <div class="zelle-info">
-          <div class="zelle-badge">Zelle Payment</div>
+          <div>
+            <h2>Pay with Zelle</h2>
 
-          <h2>Option 1: Zelle</h2>
+            <div class="info-box">
+              <span class="label">Recipient</span>
+              <span class="value">Nguyen Truc Dao Nguyen</span>
+            </div>
 
-          <div class="info-row">
-            <span class="label">Recipient</span>
-            <span>Nguyen Truc Dao Nguyen</span>
+            <div class="info-box">
+              <span class="label">Zelle Email</span>
+              <span class="value">nntdao1311@gmail.com</span>
+            </div>
+
+            <div class="highlight">
+              Please include the student's full name in the payment memo.
+            </div>
           </div>
 
-          <div class="info-row">
-            <span class="label">Zelle Email</span>
-            <span>nntdao1311@gmail.com</span>
+          <div class="qr-card">
+            <img src="option1.png" alt="Zelle QR Code">
+
+            <p class="qr-title">Scan to Pay</p>
+            <p class="qr-subtitle">
+              Open your banking app and scan the QR code.
+            </p>
           </div>
 
-          <div class="highlight">
-            Please include the student's full name in the payment memo.
+        </div>
+      </div>
+
+      <!-- CREDIT CARD -->
+      <div class="option">
+        <span class="badge">Option 2 · Credit Card</span>
+
+        <h2>Pay by Credit Card</h2>
+
+        <p>
+          Families who prefer to pay by credit card may use our secure
+          online payment option through Stripe.
+        </p>
+
+        <div class="price-row">
+          <span class="label">Credit Card Tuition</span>
+          <div class="price">$664.45</div>
+          <div class="note">
+            This amount includes a 4% payment processing fee.
           </div>
         </div>
 
-        <div class="qr-card">
-          <img src="option1.png" alt="Zelle QR Code">
+        <a
+          class="button"
+          href="https://buy.stripe.com/3cI6oJ94meua9edeNueME02"
+          target="_blank"
+          rel="noopener noreferrer">
+          Pay by Credit Card
+        </a>
+      </div>
 
-          <p class="qr-title">Scan to Pay</p>
-          <p class="qr-subtitle">
-            Open your banking app and scan the QR code.
+      <!-- AFTER PAYMENT -->
+      <div class="option">
+        <span class="badge">Next Step</span>
+
+        <h2>After Payment</h2>
+
+        <p>
+          Once payment is received, we will send a confirmation email and
+          onboarding information, including:
+        </p>
+
+        <ul>
+          <li>Program schedule</li>
+          <li>Zoom links (if applicable)</li>
+          <li>Course materials</li>
+        </ul>
+      </div>
+
+      <!-- REFUND POLICY -->
+      <div class="option">
+        <span class="badge">Refund Policy</span>
+
+        <h2>Refund Policy</h2>
+
+        <p>
+          If a student withdraws before the program begins, or if the program
+          schedule is changed or canceled due to insufficient cohort enrollment,
+          the following refund policy applies:
+        </p>
+
+        <div class="info-box">
+          <span class="label">Refund Option 1</span>
+          <span class="value">100% Full Refund</span>
+          <p>
+            Receive a full refund of all tuition paid.
           </p>
         </div>
 
+        <div class="info-box">
+          <span class="label">Refund Option 2</span>
+          <span class="value">Refund Less Processing Fees</span>
+          <p>
+            Receive a refund with a 4% deduction to cover payment processing
+            and transaction fees.
+          </p>
+        </div>
+
+        <div class="highlight">
+          Refund requests must be submitted in writing via email to
+          <a href="mailto:vaolab474@gmail.com">vaolab474@gmail.com</a>.
+        </div>
       </div>
-    </div>
 
-    <div class="option">
-      <h2>Option 2: Credit Card</h2>
-
-      <p>
-        For families who prefer to pay by credit card, we offer a secure
-        online payment option through Stripe.
-      </p>
-
-      <p>
-        <span class="label">Credit Card Tuition:</span>
-        $664
-      </p>
-
-      <p>
-        <em>This amount includes a 4% payment processing fee.</em>
-      </p>
-
-      <a
-        class="button"
-        href="https://buy.stripe.com/3cI6oJ94meua9edeNueME02"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Pay by Credit Card
-      </a>
-    </div>
-
-    <div class="option">
-      <h2>After Payment</h2>
-
-      <p>
-        Once payment is received, we will send a confirmation email and
-        onboarding information, including:
-      </p>
-
-      <ul>
-        <li>Program schedule</li>
-        <li>Zoom links (if applicable)</li>
-        <li>Course materials</li>
-      </ul>
-    </div>
-
-    <div class="footer">
-      <p>
-        If you have any questions, please contact
+      <div class="footer">
+        Questions? Please contact
         <a href="mailto:vaolab474@gmail.com">vaolab474@gmail.com</a>
-      </p>
+      </div>
+
     </div>
-
   </div>
-
 </body>
 </html>
+```
